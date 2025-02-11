@@ -1,11 +1,16 @@
 """Utilities for exploiting active subspaces in response surfaces."""
 import numpy as np
-import utils.designs as dn
-from utils.simrunners import SimulationRunner
-from utils.misc import conditional_expectations
-from utils.response_surfaces import RadialBasisApproximation
-from domains import UnboundedActiveVariableDomain, BoundedActiveVariableDomain, \
-                    ActiveVariableMap
+
+from .utils import designs as dn
+from .utils.simrunners import SimulationRunner
+from .utils.misc import conditional_expectations
+from .utils.response_surfaces import RadialBasisApproximation
+from .domains import (
+    UnboundedActiveVariableDomain,
+    BoundedActiveVariableDomain,
+    ActiveVariableMap,
+)
+
 
 class ActiveSubspaceResponseSurface():
     """A class for using active subspace with response surfaces.
